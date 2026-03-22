@@ -45,7 +45,10 @@
 	labelsep=period,
 	skip=5pt
 }
-\captionsetup[table]{justification=raggedright, singlelinecheck=off}
+% Явное указание положения подписей
+\captionsetup[table]{position=top, justification=raggedright, singlelinecheck=off}
+\captionsetup[figure]{position=bottom}
+
 
 % Подписи к рисункам
 \addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
@@ -81,10 +84,10 @@
 \DeclareCaptionLabelFormat{gostcaption}{Листинг #2} % Формат "Листинг X"
 \captionsetup[lstlisting]{
 	labelformat=gostcaption,
-	justification=centering,
+	 justification=raggedright,
+	 position=top,
 	singlelinecheck=false,
 	font={small,it},
-	position=bottom,
 	skip=5pt
 }
 
@@ -107,7 +110,7 @@
 	frame=single,
 	rulecolor=\color{black},
 	tabsize=4,
-	captionpos=b,
+%	captionpos=b,
 	breaklines=true,
 	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
 	extendedchars=true,
