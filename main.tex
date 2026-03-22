@@ -1,0 +1,52 @@
+\documentclass{HSEDiploma}
+
+\usepackage{graphicx}
+
+% --- Персональные данные ---
+\renewcommand{\TheStudent}{Иванов Иван Иванович}
+\renewcommand{\TheStudentEng}{Ivanov Ivan Ivanovich}
+\renewcommand{\TheFaculty}{Факультет компьютерных наук}
+\renewcommand{\TheMajor}{09.04.04 Программная инженерия}
+\renewcommand{\TheProgram}{<<Системное программирование>>}
+
+\renewcommand{\TheThemeRus}{Роль выпускных квалификационных работ в системе высшего образования XXI века}
+\renewcommand{\TheThemeEng}{The Role of Final Qualification Works in the Higher Education System of the 21st Century}
+
+\renewcommand{\TheSupervisor}{Доцент Доцентович Доцентов}
+\renewcommand{\TheSupervisorPrefix}{профессор, д.ф.-м.н.}
+
+\renewcommand{\TheCovisor}{Содоцент Содоцентович Содоцентов}
+\renewcommand{\TheCovisorPrefix}{сопрофессор, к.ф.-м.н.}
+
+\renewcommand{\TheConsultant}{Консультант Консультанович Консультантов}
+\renewcommand{\TheConsultantPrefix}{к.ф.-м.н., лаборант ООО лаборатория}
+
+\renewcommand{\TheReviewer}{Рецензент Рецензентович Рецензентов}
+\renewcommand{\TheReviewerPrefix}{к.ф.-м.н., лаборант}
+
+\begin{document}
+	
+	% --- Титульная страница ---
+	\titlepage
+	
+	% --- Аннотации ---
+	\begin{abstractpagerus}
+		Данная работа посвящена анализу роли выпускных квалификационных работ в системе высшего образования XXI века. Рассматриваются исторические предпосылки, современные требования, а также практические аспекты выполнения дипломных проектов в области программной инженерии. Особое внимание уделяется интеграции научных исследований и реальных индустриальных задач.
+	\end{abstractpagerus}
+	
+	\begin{abstractpageeng}
+		This work is devoted to the analysis of the role of final qualification works in the higher education system of the 21st century. Historical prerequisites, modern requirements, and practical aspects of diploma projects in the field of software engineering are considered. Special attention is paid to the integration of scientific research and real industrial tasks.
+	\end{abstractpageeng}
+	
+	% --- Содержание ---
+	\tableofcontents
+	
+	% --- Главы (подключаются отдельными файлами) ---
+	\include{chapter1}   % Глава 1: Исторический контекст и значение дипломных работ
+	\include{chapter2}   % Глава 2: Современные вызовы и практическая реализация
+	
+	% --- Список литературы ---
+	\bibliographystyle{gost71u}
+	\bibliography{references}
+	
+\end{document}
