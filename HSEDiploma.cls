@@ -213,7 +213,7 @@
 		образовательная программа \underline{\TheProgram}\\
 		\vspace{1.5cm}
 		
-		\begin{tabular}{p{0.45\textwidth}r}
+		\begin{tabular}{p{0.50\textwidth}r}
 			
 			\ifdefempty{\TheStudentShort}{}{%
 				Студент & \\
