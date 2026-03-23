@@ -168,6 +168,7 @@
 
 \newcommand{\TheStudent}{Пупкин Василий Григорьевич}
 \newcommand{\TheStudentEng}{Pupkin Vasiliy Grigorevich}
+\newcommand{\TheStudentShort}{В. Г. Пупкин}
 
 % Полное имя научника
 \newcommand{\TheSupervisor}{}
@@ -195,35 +196,38 @@
 	\setcounter{page}{1}
 	\thispagestyle{empty}
 	\begin{center}
-		\textbf{Федеральное государственное автономное образовательное учреждение \\ 
-				высшего образования  «Национальный исследовательский университет \\
-				«Высшая школа экономики» \\}
-		\vspace{0.25cm}
-		\textbf{\TheFaculty}
+		\textbf{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ \\ 
+				УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\
+				<<НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ  \\
+				«ВЫСШАЯ ШКОЛА ЭКОНОМИКИ» \\}
+		\textbf{\TheFaculty} \\
 		
-		\vspace{0.5cm}
+		\vspace{1cm}
 		\underline{\TheStudent} \\
 		\vspace{1cm}
-		МАГИСТЕРСКАЯ ДИССЕРТАЦИЯ
-		\vspace{0.25cm} \\
+		МАГИСТЕРСКАЯ ДИССЕРТАЦИЯ \\
 		\textbf{\textsc{\TheThemeRus}}\\
-		\vspace{0.25cm}
 		\textbf{\textsc{\TheThemeEng}}\\
-		\vspace{0.25cm}
+		\vspace{1cm}
 		по направлению подготовки \underline{\TheMajor} \\
 		образовательная программа \underline{\TheProgram}\\
 		\vspace{1.5cm}
 		
 		\begin{tabular}{p{0.45\textwidth}r}
 			
-			\ifdefempty{\TheReviewer}{}{\textbf{Рецензент}} & \ifdefempty{\TheSupervisor}{}{\textbf{Научный руководитель}} \\
+			\ifdefempty{\TheStudentShort}{}{%
+				Студент & \\
+				\TheStudentShort & \\ [0.5cm]
+			}
 			
-			\ifdefempty{\TheReviewer}{}{\ifdefempty{\TheReviewerPrefix}{\TheReviewer}{\TheReviewerPrefix}}& 	\ifdefempty{\TheSupervisor}{}{\ifdefempty{\TheSupervisorPrefix}{\TheSupervisor}{\TheSupervisorPrefix}} \\
-			
-			\ifdefempty{\TheReviewer}{}{\ifdefempty{\TheReviewerPrefix}{}{\TheReviewer}} & \ifdefempty{\TheSupervisor}{}{\ifdefempty{\TheSupervisorPrefix}{}{\TheSupervisor}} \\[0.5cm]
+			\ifdefempty{\TheSupervisor}{}{%
+				& Научный руководитель \\
+				& \ifdefempty{\TheSupervisorPrefix}{\TheSupervisor}{\TheSupervisorPrefix} \\
+				& \ifdefempty{\TheSupervisorPrefix}{}{\TheSupervisor} \\  [0.5cm]
+			}
 			
 			\ifdefempty{\TheCovisor}{}{%
-				& \textbf{Соруководитель} \\
+				& Соруководитель \\
 				& \ifdefempty{\TheCovisorPrefix}{\TheCovisor}{\TheCovisorPrefix} \\
 				& \ifdefempty{\TheCovisorPrefix}{}{\TheCovisor} \\ [0.5cm]
 			}
